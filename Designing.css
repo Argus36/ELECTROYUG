@@ -1,0 +1,557 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body {
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@keyframes Left_Right {
+    from {
+        transform: translate(-100%,0);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+@keyframes animetion_customers {
+    from {
+        opacity: 0;
+        transform: translate(0px, 150%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+@keyframes animetion_left-right {
+    from {
+        transform: translate(-50%, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes animetion_right-left {
+    from {
+        transform: translate(50%, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+.designing {
+    width: 100%;
+    display: block;
+    transition: 1s;
+}
+.top_arrow {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 3%;
+    min-width: 50px;
+    transition: 1s;
+    display: none;
+    border-radius: 50%;
+}
+.top_arrow:hover {
+    background-color: rgb(120, 187, 253);
+    transition: 1s;
+}
+
+.Madal_Container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Black_Modal_Window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    cursor: pointer;
+}
+.Container_Text {
+    position: absolute;
+    z-index: 1200;
+    width: 600px;
+    max-width: 60%;
+    min-width: 500px;
+    min-height: 500px;
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+.Container_Text .Modal_H2 {
+    color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+.Container_Text .Modal_Hr {
+    margin: 40px 0;
+    border: solid 1px lightgrey;
+    width: 111%;
+    transform: translate(-5%,0);
+}
+.Container_Text .Modal_Input {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+}
+.Container_Text .Textarea {
+    width: 100%;
+    height: 150px;
+    max-height: 450px;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+    resize: vertical;
+}
+.Container_Text .A {
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(120, 187, 253);
+    padding: 20px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: solid 0px white;
+    cursor: pointer;
+}
+.Container_Text .A:hover {
+    background-color: rgb(120, 187, 253,0.75);
+}
+.Text_Send {
+    color: white;
+    font-size: 5em;
+    line-height: 100px;
+    text-align: center;
+    margin: 60px auto;
+}
+.Madal_Container .Img {
+    z-index: 1200;
+    outline: 5px solid black;
+    outline-offset: -5px;
+    width: 70%;
+    height: 90%;
+    max-height: 700px;
+}
+.Left {
+    width: 550px;
+    max-width: 50%;
+    min-width: 400px;
+    height: 650px;
+    background-color: rgba(92, 184, 0, 0.5);
+    background-size: cover;
+    padding: 150px 30px;
+    border-radius: 10px;
+}
+
+.header {
+    width: 100%;
+}
+.container {
+    width: 75%;
+    margin: auto;
+}
+.header .contact_information,.header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header .contact_information {
+    margin-bottom: 10px;
+}
+.header .contact_information .menu_items_2 {
+    padding: 0 75px 0 20px;
+    margin: 20px 0 0 0;
+    border-right: solid 1px lightgray;
+}
+.header .contact_information .menu_items {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 20px 100px 0 0;
+}
+.header .contact_information .menu_items_2 p {
+    color: black;
+    font-size: 13px;
+    line-height: 20px;
+}
+.header .contact_information .img {
+    width: 25px;
+}
+.header .contact_information a  {
+    color: black;
+    text-decoration: none;
+}
+.header .contact_information .menu_items_2 .word_weight {
+    font-weight: 800;
+    font-size: 12px;
+}
+.header .menu {
+    background-color: black;
+    padding: 30px;
+}
+.header .menu a {
+    background-color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+}
+.header .menu .menu_items_active {
+    color: rgb(120, 187, 253);
+}
+.menu .menu_items:hover,.menu .menu_items_electrolaboratory:hover,.menu .menu_items_mane:hover,.menu .menu_items_services:hover,.menu .menu_items_phone_call:hover,.menu .menu_items_mounting:hover,.menu .menu_items_designing:hover {
+    color: rgb(120, 187, 253);
+}
+.designing .backgraund {
+    background-image: url("img/Designing_Backgraund.png");
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backgraund .electrical_tests {
+    outline: 1px solid rgba(211, 211, 211, 0.5);
+    outline-offset: -10px;
+    width: 80%;
+    max-width: 800px;
+    height: 350px;
+    background-color: rgb(116,184,230, 0.9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: Left_Right 1s;
+}
+.backgraund .electrical_tests .h2 {
+    color: black;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    line-height: 45px;
+    margin: 0 auto;
+}
+.backgraund .electrical_tests .p {
+    color: black;
+    margin: 30px 0;
+    font-weight: 600;
+    width: 650px;
+    letter-spacing: 3px;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+.backgraund .electrical_tests .a {
+    text-decoration: none;
+    background-color: rgb(50, 153, 255);
+    border-radius: 30px;
+    padding: 15px 25px;
+}
+.integrated_design .h2_active {
+    margin: 30px auto;
+    color: black;
+    width: 60%;
+    min-width: 700px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 50px;
+    animation: animetion_customers 1s;
+}
+.integrated_design .p {
+    margin: auto;
+    color: black;
+    width: 35%;
+    min-width: 700px;
+    line-height: 25px;
+}
+.integrated_design .button,.integrated_design .a {
+    color: white;
+    width: 200px;
+    margin: 50px auto 0 auto;
+    
+}
+.integrated_design .a {
+    background-color: rgb(120, 187, 253);
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.integrated_design .img {
+    margin: 10px auto;
+    width: 40%;
+    min-width:  600px;
+    height: auto;
+}
+.integrated_design .img .img {
+    width: 100%;
+    opacity: 0;
+    transition: 3s;
+}
+.stages_power .h2 {
+    margin: 30px auto 0 auto;
+    color: black;
+    width: 45%;
+    min-width: 700px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 50px;
+}
+.stages_power .container_text {
+    width: 60%;
+    min-width: 700px;
+    margin: auto;
+}
+.stages_power .h3,.stages_power .h3_2,.stages_power .h3_3 {
+    color: black;
+    font-weight: 100;
+    font-size: 1.8em;
+    margin: 40px 0 25px 0;
+}
+.stages_power .p,.stages_power .p_2,.stages_power .p_3 {
+    color: black;
+    font-size: 1.2em;
+    line-height: 28px;
+}
+.structure_project .h2 {
+    margin: 60px auto 0 auto;
+    color: black;
+    width: 60%;
+    min-width: 700px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 50px;
+}
+.structure_project .container {
+    display: flex;
+    justify-content: center;
+    max-width: 45%;
+    min-width: 600px;
+    margin: 100px auto;
+}
+.structure_project .advice,.structure_project .table,.structure_project .plans {
+    width: 33.3%;
+    min-width: 250px;
+    text-align: center;
+    padding: 75px 20px 0 20px;
+    height: 600px;
+    border: solid 1px rgba(211, 211, 211, 0.5);
+    transition: 0.75s;
+}
+.structure_project .advice:hover,.structure_project .table:hover,.structure_project .plans:hover {
+    padding: 50px 20px 0 20px;
+    transition: 0.75s;
+    border-bottom: solid 10px orange;
+}
+.structure_project .advice .img,.structure_project .table .img,.structure_project .plans .img {
+    width: 50px;
+    margin: 0 auto 50px auto;
+}
+.structure_project .advice .hr_blue,.structure_project .table .hr_blue,.structure_project .plans .hr_blue {
+    border: solid 1px orange;
+    width: 50px;
+    margin: 0 auto 30px auto;
+}
+.structure_project .advice .p,.structure_project .table .p,.structure_project .plans .p {
+    color: black;
+    margin: 10px auto;
+    width: 80%;
+    min-width: 200px;
+}
+.structure_project .advice .hr,.structure_project .table .hr,.structure_project .plans .hr {
+    margin: 20px auto;
+}
+.project_cost .h2 {
+    margin: 60px auto 0 auto;
+    color: black;
+    width: 60%;
+    min-width: 750px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+    line-height: 50px;
+}
+.project_cost .container {
+    margin: 50px auto 10px auto;
+    width: 70%;
+    min-width: 850px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.project_cost .left,.project_cost .right {
+    width: 45%;
+    min-width: 325px;
+}
+.project_cost .top,.project_cost .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 100%;
+    min-width: 300px;
+}
+.project_cost .img {
+    width: 50px;
+}
+.project_cost .text {
+    width: 95%;
+    min-width: 250px;
+    margin: 0 0 0 20px;
+}
+.project_cost .text .h3 {
+    color: black;
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+
+}
+.project_cost .text .p {
+    color: black;
+    font-size: 1.1em;
+    line-height: 25px;
+}
+.project_cost .p1 {
+    margin: 0 auto;
+    color: black;
+    font-size: 1em;
+    width: 35%;
+    min-width: 700px;
+    text-align: center;
+}
+.leave_request {
+    background-image: url("img/Electrolaboratory_Bottom_Gradient.png");
+    background-size: cover;
+}
+.leave_request .right .h2 {
+    text-align: start;
+}
+.leave_request {
+    background-color: rgb(117, 137, 156);
+    margin: 50px 0 0 0;
+    padding: 150px 0 100px 0;
+}
+.leave_request .container {
+    width: 60%;
+    min-width: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leave_request .left {
+    width: 550px;
+    max-width: 50%;
+    min-width: 400px;
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+.leave_request .left .h3 {
+    color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+.leave_request .left .hr {
+    margin: 20px 0;
+    border: solid 1px lightgrey;
+    width: 112%;
+    transform: translate(-5.5%,0);
+}
+.leave_request .left .input {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+}
+.leave_request .left .textarea {
+    width: 100%;
+    height: 150px;
+    max-height: 450px;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+    resize: vertical;
+}
+.leave_request .left .button {
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(120, 187, 253);
+    padding: 20px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: solid 0px white;
+    cursor: pointer;
+}
+.leave_request .left .button:hover {
+    background-color: rgb(120, 187, 253,0.75);
+}
+.leave_request .right {
+    width: 500px;
+    min-width: 400px;
+    max-width: 45%;
+}
+.leave_request .right .h2 {
+    font-size: 3.5em;
+    line-height: 1;
+    margin: 0 0 30px 0;
+    color: white;
+}
+.leave_request .right .p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+.leave_request .right .a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: rgb(50, 153, 255);
+    padding: 10px 20px;
+    border-radius: 50px;
+}

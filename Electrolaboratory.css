@@ -1,0 +1,540 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body {
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@keyframes animetion_left-right {
+    from {
+        transform: translate(-50%, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes animetion_right-left {
+    from {
+        transform: translate(50%, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes Left_Right {
+    from {
+        transform: translate(-100%,0);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+@keyframes animetion_customers {
+    from {
+        opacity: 0;
+        transform: translate(0px, 150%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+.electrolaboratory {
+    width: 100%;
+    display: block;
+    transition: 1s;
+}
+.top_arrow {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 3%;
+    min-width: 50px;
+    transition: 1s;
+    display: none;
+    border-radius: 50%;
+}
+.top_arrow:hover {
+    background-color: rgb(120, 187, 253);
+    transition: 1s;
+}
+
+.Madal_Container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Black_Modal_Window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    cursor: pointer;
+}
+.Container_Text {
+    position: absolute;
+    z-index: 1200;
+    width: 600px;
+    max-width: 60%;
+    min-width: 500px;
+    min-height: 500px;
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+.Container_Text .Modal_H2 {
+    color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+.Container_Text .Modal_Hr {
+    margin: 40px 0;
+    border: solid 1px lightgrey;
+    width: 111%;
+    transform: translate(-5%,0);
+}
+.Container_Text .Modal_Input {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+}
+.Container_Text .Textarea {
+    width: 100%;
+    height: 150px;
+    max-height: 450px;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+    resize: vertical;
+}
+.Container_Text .A {
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(120, 187, 253);
+    padding: 20px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: solid 0px white;
+    cursor: pointer;
+}
+.Container_Text .A:hover {
+    background-color: rgb(120, 187, 253,0.75);
+}
+.Text_Send {
+    color: white;
+    font-size: 5em;
+    line-height: 100px;
+    text-align: center;
+    margin: 60px auto;
+}
+.Madal_Container .Img {
+    z-index: 1200;
+    outline: 5px solid black;
+    outline-offset: -5px;
+    width: 70%;
+    height: 90%;
+    max-height: 700px;
+}
+.Left {
+    width: 550px;
+    max-width: 50%;
+    min-width: 400px;
+    height: 650px;
+    background-color: rgba(92, 184, 0, 0.5);
+    background-size: cover;
+    padding: 150px 30px;
+    border-radius: 10px;
+}
+
+.header {
+    width: 100%;
+}
+.container {
+    width: 75%;
+    margin: auto;
+}
+.header .contact_information,.header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header .contact_information {
+    margin-bottom: 10px;
+}
+.header .contact_information .menu_items_2 {
+    padding: 0 75px 0 20px;
+    margin: 20px 0 0 0;
+    border-right: solid 1px lightgray;
+}
+.header .contact_information .menu_items {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 20px 100px 0 0;
+}
+.header .contact_information .menu_items_2 p {
+    color: black;
+    font-size: 13px;
+    line-height: 20px;
+}
+.header .contact_information .img {
+    width: 25px;
+}
+.header .contact_information a  {
+    color: black;
+    text-decoration: none;
+}
+.header .contact_information .menu_items_2 .word_weight {
+    font-weight: 800;
+    font-size: 12px;
+}
+.header .menu {
+    background-color: black;
+    padding: 30px;
+}
+.header .menu a {
+    background-color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+}
+.header .menu .menu_items_active {
+    color: rgb(120, 187, 253);
+}
+.menu .menu_items:hover,.menu .menu_items_electrolaboratory:hover,.menu .menu_items_mane:hover,.menu .menu_items_services:hover,.menu .menu_items_phone_call:hover,.menu .menu_items_mounting:hover,.menu .menu_items_designing:hover {
+    color: rgb(120, 187, 253);
+}
+.electrolaboratory .backgraund {
+    background-image: url("img/Electrolaboratory_Header_Gradient.png");
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backgraund .electrical_tests {
+    outline: 1px solid rgba(211, 211, 211, 0.5);
+    outline-offset: -10px;
+    width: 80%;
+    max-width: 800px;
+    height: 350px;
+    background-color: rgb(116,184,230, 0.9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: Left_Right 1s;
+}
+.backgraund .electrical_tests .h2 {
+    color: black;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    margin: 0 auto;
+}
+.backgraund .electrical_tests .p {
+    color: black;
+    margin: 30px 0;
+    font-weight: 600;
+    width: 650px;
+    letter-spacing: 3px;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+.backgraund .electrical_tests .a {
+    text-decoration: none;
+    background-color: rgb(50, 153, 255);
+    border-radius: 30px;
+    padding: 15px 25px;
+}
+.electrolaboratory .h2_active {
+    color: black;
+    font-size: 2.2em;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px auto;
+    animation: animetion_customers 1s;
+}
+.electrolaboratory .h2 {
+    color: black;
+    font-size: 2.2em;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px auto;
+}
+.electrolaboratory .services,.electrolaboratory .services .container {
+    display: flex;
+    justify-content: center;
+}
+.electrolaboratory .services .container {
+    max-width: 55%;
+    min-width: 800px;
+}
+.electrolaboratory .services .trials,.electrolaboratory .services .measurement,.electrolaboratory .services .checks {
+    width: 33.3%;
+    text-align: center;
+    padding: 75px 20px 0 20px;
+    max-height: 800px;
+    border: solid 1px rgba(211, 211, 211, 0.5);
+    transition: 0.75s;
+}
+.electrolaboratory .services .trials:hover,.electrolaboratory .services .measurement:hover,.electrolaboratory .services .checks:hover {
+    padding: 50px 20px 0 20px;
+    transition: 0.75s;
+    border-bottom: solid 10px orange;
+}
+.electrolaboratory .services .trials .img,.electrolaboratory .services .measurement .img,.electrolaboratory .services .checks .img {
+    width: 50px;
+}
+.electrolaboratory .services .trials .h3,.electrolaboratory .services .measurement .h3,.electrolaboratory .services .checks .h3 {
+    color: orange;
+    margin: 20px auto 50px auto;
+}
+.electrolaboratory .services .trials .hr_blue,.electrolaboratory .services .measurement .hr_blue,.electrolaboratory .services .checks .hr_blue {
+    border: solid 1px orange;
+    width: 50px;
+    margin: 0 auto 30px auto;
+}
+.electrolaboratory .services .trials .p,.electrolaboratory .services .measurement .p,.electrolaboratory .services .checks .p {
+    color: black;
+    margin: 10px auto;
+}
+.electrolaboratory .services .trials .hr,.electrolaboratory .services .measurement .hr,.electrolaboratory .services .checks .hr {
+    margin: 20px auto;
+}
+.types_tests .container {
+    max-width: 60%;
+    min-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.types_tests .left,.types_tests .right {
+    min-width: 440px;
+}
+.types_tests .acceptance_certificates,.types_tests .control,.types_tests .preventive,.types_tests .periodic {
+    margin: 50px 50px 0 50px;
+    height: 150px;
+    max-height: 200px;
+}
+.types_tests .acceptance_certificates .flex_container,.types_tests .control .flex_container,.types_tests .preventive .flex_container,.types_tests .periodic .flex_container {
+    display: flex;
+}
+.types_tests .acceptance_certificates .h3,.types_tests .control .h3,.types_tests .preventive .h3,.types_tests .periodic .h3 {
+    color: black;
+    width: auto;
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+.types_tests .acceptance_certificates .h3 {
+    width: 130px;
+    margin-right: 20px;
+}
+.types_tests .acceptance_certificates .hr,.types_tests .control .hr,.types_tests .preventive .hr,.types_tests .periodic .hr {
+    width: 100%;
+    height: 1px;
+    border: solid 1px lightgrey;
+    transform: translate(0,500%);
+}
+.types_tests .acceptance_certificates .hr {
+    transform: translate(0,1000%);
+}
+.types_tests .acceptance_certificates .p1,.types_tests .control .p2,.types_tests .preventive .p3,.types_tests .periodic .p4 {
+    height: 25px;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    background-color: rgb(120, 187, 253);
+    border-radius: 5px;
+    font-size: 0.6em;
+    margin-left: 10px;
+}
+.types_tests .acceptance_certificates .p1 {
+    transform: translate(0,40%);
+}
+.types_tests .p {
+    color: black;
+    font-size: 1.2em;
+    margin: 50px auto;
+}
+.types_tests .acceptance_certificates .p {
+    margin: 20px auto
+}
+.how_works .container {
+    min-width: 900px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.how_works .left,.how_works .right {
+    min-width: 500px;
+    width: 40%;
+}
+.how_works .reception_applications,.how_works .testing,.how_works .study_characteristics,.how_works .report {
+    margin: 10px 30px 40px 30px;
+    height: 150px;
+    max-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.how_works .img {
+    width: 10%;
+    min-width: 60px;
+    height: 40%;
+}
+.how_works .reception_applications .img .img,.how_works .testing .img .img,.how_works .study_characteristics .img .img,.how_works .report .img .img {
+    width: 100%;
+    min-width: 60px;
+    height: 100%;
+}
+.how_works .reception_applications .text,.how_works .testing .text,.how_works .study_characteristics .text,.how_works .report .text {
+    width: 85%;
+}
+.how_works .text .h3 {
+    color: black;
+    font-size: 1.05em;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+.how_works .text .p {
+    color: black;
+    line-height: 22px;
+}
+.how_works .weight_text {
+    color: black;
+    font-weight: 600;
+}
+.electrolaboratory .leave_request {
+    background-image: url("img/Electrolaboratory_Bottom_Gradient.png");
+    background-size: cover;
+}
+.electrolaboratory .leave_request .right .h2 {
+    text-align: start;
+}
+.leave_request {
+    background-color: rgb(117, 137, 156);
+    padding: 150px 0 100px 0;
+}
+.leave_request .container {
+    width: 60%;
+    min-width: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leave_request .left {
+    width: 550px;
+    max-width: 50%;
+    min-width: 400px;
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+.leave_request .left .h3 {
+    color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+.leave_request .left .hr {
+    margin: 20px 0;
+    border: solid 1px lightgrey;
+    width: 112%;
+    transform: translate(-5.5%,0);
+}
+.leave_request .left .input {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+}
+.leave_request .left .textarea {
+    width: 100%;
+    height: 150px;
+    max-height: 450px;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: solid 0.5px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: black;
+    resize: vertical;
+}
+.leave_request .left .button {
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(120, 187, 253);
+    padding: 20px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: solid 0px white;
+    cursor: pointer;
+}
+.leave_request .left .button:hover {
+    background-color: rgb(120, 187, 253,0.75);
+}
+.leave_request .right {
+    width: 500px;
+    min-width: 400px;
+    max-width: 45%;
+}
+.leave_request .right .h2 {
+    font-size: 3.5em;
+    line-height: 1;
+    margin: 0 0 30px 0;
+    color: white;
+}
+.leave_request .right .p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+.leave_request .right .a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: rgb(50, 153, 255);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
